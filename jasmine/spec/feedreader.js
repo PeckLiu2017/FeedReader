@@ -42,7 +42,11 @@ $(function() {
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
-
+        it('each feed has a effective name', function () {
+          $.each(allFeeds,function () {
+            expect($(this).attr('name').length).not.toBe(0);
+          });
+        });
     });
 
 
