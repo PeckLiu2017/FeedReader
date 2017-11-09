@@ -28,14 +28,15 @@
             <h1 class="header-title">Feeds</h1>
         </div>
 
-        <!-- 左边的滑入菜单，一开始是隐藏的 -->
+        <!-- 左边的水平滑入菜单，一开始是隐藏的 -->
         <div class="slide-menu">
             <ul class="feed-list"></ul>
         </div>
 
-        <!-- 具体的超链接列表 -->
+        <!-- 超链接列表 -->
         <div class="feed"></div>
 
+        <!-- 将使用 Handlebars 模板引擎预编译 {{}} 中的代码将内容放到 feed 中 -->
         <script class="tpl-entry" type="text/x-handlebars-template">
             <a class="entry-link" href="{{link}}">
                 <article class="entry">
@@ -45,6 +46,7 @@
             </a>
         </script>
 
+        <!-- 将使用 Handlebars 模板引擎预编译 {{}} 中的代码将内容放在 feed-list 中 -->
         <script class="tpl-feed-list-item" type="text/x-handlebars-template">
             <li>
                 <a href="#" data-id="{{id}}">{{name}}</a>

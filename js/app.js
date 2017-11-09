@@ -29,6 +29,7 @@ var allFeeds = [
  */
 function init() {
     // Load the first feed we've defined (index of 0).
+    console.log('222');
     loadFeed(0);
 }
 
@@ -43,7 +44,7 @@ function init() {
  function loadFeed(id, cb) {
      var feedUrl = allFeeds[id].url,
          feedName = allFeeds[id].name;
-
+console.log('111');
      $.ajax({
        type: "POST",
        url: 'https://rsstojson.udacity.com/parseFeed',
@@ -93,6 +94,7 @@ google.setOnLoadCallback(init);
  * until the DOM is ready.
  */
 $(function() {
+  console.log('333');
     var container = $('.feed'),
         feedList = $('.feed-list'),
         feedItemTemplate = Handlebars.compile($('.tpl-feed-list-item').html()),
@@ -105,10 +107,12 @@ $(function() {
      * above using Handlebars) and append it to the list of all
      * available feeds within the menu.
      */
+     console.log('444');
     allFeeds.forEach(function(feed) {
+      console.log('666');
         feed.id = feedId;
         feedList.append(feedItemTemplate(feed));
-
+console.log(feed);
         feedId++;
     });
 
@@ -118,7 +122,7 @@ $(function() {
      */
     feedList.on('click', 'a', function() {
         var item = $(this);
-
+console.log('555');
         $('body').addClass('menu-hidden');
         loadFeed(item.data('id'));
         return false;
