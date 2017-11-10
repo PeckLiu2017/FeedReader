@@ -34,7 +34,7 @@ $(function() {
           $.each(allFeeds,function () {
             expect($(this).attr('url')).toBeDefined();
             expect($(this).attr('url').length).toBeGreaterThan(0);
-          })
+          });
         });
 
         /* Write a test that loops through each feed
@@ -69,7 +69,7 @@ $(function() {
           it('menu changes visibility when the menu icon is clicked', function () {
             let menuState = function menuState() {
               return $('body').hasClass('menu-hidden') ? true : false;
-            }
+            };
 
             if ($('.menu-icon-link').trigger('click')) {
                 expect(menuState()).toBe(false);
@@ -98,8 +98,7 @@ $(function() {
            expect($('.feed').find('.entry').length).toBeGreaterThan(0);
            done();
          });
-
-    })
+    });
 
     /* Write a new test suite named "New Feed Selection" */
     describe('New Feed Selection',function () {
@@ -126,5 +125,5 @@ $(function() {
            expect(changedFeedHtml).not.toBe(defaultFeedHtml);
            done();
          });
-    })
+    });
 }());
