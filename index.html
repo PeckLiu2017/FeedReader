@@ -18,7 +18,7 @@
         <script src="jasmine/lib/jasmine-2.1.2/boot.js"></script>
     </head>
 
-    <!--  链接菜单 -->
+    <!-- Link menu -->
     <body class="menu-hidden">
         <div class="header">
             <a href="#" class="menu-icon-link">
@@ -28,15 +28,15 @@
             <h1 class="header-title">Feeds</h1>
         </div>
 
-        <!-- 左边的水平滑入菜单，一开始是隐藏的 -->
+        <!-- The left horizontal slide into menu which is hidden by default -->
         <div class="slide-menu">
             <ul class="feed-list"></ul>
         </div>
 
-        <!-- 超链接列表 -->
+        <!-- Feed hyperlink list -->
         <div class="feed"></div>
 
-        <!-- 将使用 Handlebars 模板引擎预编译 {{}} 中的代码将内容放到 feed 中 -->
+        <!-- The Handlebars templating engine will be used to pre-compile the code in {{}} and place the content in the feed div -->
         <script class="tpl-entry" type="text/x-handlebars-template">
             <a class="entry-link" href="{{link}}">
                 <article class="entry">
@@ -46,7 +46,7 @@
             </a>
         </script>
 
-        <!-- 将使用 Handlebars 模板引擎预编译 {{}} 中的代码将内容放在 feed-list 中 -->
+        <!-- The Handlebars templating engine will be used to pre-compile the code in {{}} and place the content in the feed-list div -->
         <script class="tpl-feed-list-item" type="text/x-handlebars-template">
             <li>
                 <a href="#" data-id="{{id}}">{{name}}</a>
