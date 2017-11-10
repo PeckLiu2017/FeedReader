@@ -71,12 +71,10 @@ $(function() {
               return $('body').hasClass('menu-hidden') ? true : false;
             };
 
-            if ($('.menu-icon-link').trigger('click')) {
-                expect(menuState()).toBe(false);
-                if ($('.menu-icon-link').trigger('click')) {
-                    expect(menuState()).toBe(true);
-                }
-            }
+            $('.menu-icon-link').trigger('click');
+            expect(menuState()).toBe(false);
+            $('.menu-icon-link').trigger('click');
+            expect(menuState()).toBe(true);
           });
     });
 
